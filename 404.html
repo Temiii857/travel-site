@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script>
+        var path = location.pathname;
+        var repo = "/travel-site";
+        if (path.startsWith(repo)) {
+            location.replace(repo + "/#" + path.slice(repo.length) + location.search + location.hash);
+        } else {
+            location.replace(repo + "/#/" + location.search + location.hash);
+        }
+    </script>
+</head>
+<body></body>
+</html>
